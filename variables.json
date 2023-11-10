@@ -1,0 +1,21 @@
+{
+	"title": "Comment Nespresso a imaginé ses capsules à base de papier",
+	"titlesocial": "Comment Nespresso a imaginé ses capsules à base de papier",
+	"description": "Découvrez la nouvelle capsule à base de papier de Nespresso, garante du goût et compostable à domicile.",
+	"authors": {
+		"photos": "Fournies par Nespresso",
+		"videos": "Ringier Brand Studio",
+		"writer": false,
+		"dev": "César Greppin"
+	},
+	"imgSocial": "social.jpg",
+	"headertheme": "trans", 
+	"blickWhite": false,
+	"blickBlack": true,
+	"headerBoxed": false,
+	"pubDate": "2020-07-23T11:00:00+00:00",
+	"partner": {
+		"logo": "img/empty.png",
+		"link": "https://www.blick.ch/"
+	}
+}
