@@ -68,7 +68,7 @@
 	</header>
 	<aside class="aside-r w-80 font-sans h-full fixed bg-white z-40 right-0 translate-x-full"> 
 		<div class="aside-header h-12 relative">
-			<span class="absolute left-8 top-1/2 -translate-y-2/4 font-semibold uppercase text-xs mb-2 inline-block">Partager</span>
+			<span class="absolute left-8 top-1/2 -translate-y-2/4 font-semibold uppercase text-xs mb-2 inline-block">Teilen</span>
 			<ul class="float-right h-full mr-4 w-8">
 				<li class="h-full relative w-8">
 					<div class="btn btn-close-aside-r cursor-pointer absolute left-0 h-8 w-8 top-1/2 -translate-y-2/4">
@@ -90,7 +90,7 @@
 			<a href="mailto:?subject=Format spécial Blick.ch :&nbsp;{{titlesocial}}&amp;body={{titlesocial}}%0A%0A{{description}}%0A%0A{{ app.url }}" rel="nofollow noopener" target="_blank">
 				<li class="flex items-center h-20 px-8 hover:bg-neutral-200"><img src="img/icon-plane-b-noborder.svg" alt="Partager par email" class="mr-2"><span class="font-light">Email</span></li>
 			</a>
-			<li class="copy flex items-center h-20 px-8 hover:bg-neutral-200 cursor-pointer"><img src="img/icon-link-b-noborder.svg" alt="Copier l'adresse de la page" class="mr-2"><span class="font-light">Copier l'URL</span></li>
+			<li class="copy flex items-center h-20 px-8 hover:bg-neutral-200 cursor-pointer"><img src="img/icon-link-b-noborder.svg" alt="Copier l'adresse de la page" class="mr-2"><span class="font-light">URL kopieren</span></li>
 		</ul>
 	</aside>
 	<aside class="aside-l w-80 h-full fixed bg-white -translate-x-full z-40">
@@ -175,7 +175,7 @@
 
 	<div class="flex items-center mr-2">
 			<div class="align-text-bottom text-xs">
-				<span class="inline-block font-semibold uppercase">Partager</span>
+				<span class="inline-block font-semibold uppercase">Teilen</span>
 			</div>
 	</div>
 	<div class="mx-1">
@@ -224,18 +224,18 @@
 <div class="credits text-white text-xl">
 	<a href="https://www.blick.ch/fr/" target="_blank>"><img src="img/blick.svg" alt="Logo de Blick" class="w-36 mb-8"></a>
 	<p class="mb-8"> 
-		<span class="font-thin opacity-80">Production</span><br>
+		<span class="font-thin opacity-80">Produktion</span><br>
 		<span class="font-semibold">Ringier Brand Studio</span>
 	</p> 
 	{% if authors.photos %}
 	<p class="mb-8">
-		<span class="font-thin opacity-80">Photographies</span><br>
+		<span class="font-thin opacity-80">Fotos</span><br>
 		<span class="font-semibold">{{authors.photos}}</span>
 	</p>
 	{% endif %}
 	{% if authors.videos %}
 	<p class="mb-8">
-		<span class="font-thin opacity-80">Vidéos</span><br>
+		<span class="font-thin opacity-80">Videos</span><br>
 		<span class="font-semibold">{{authors.videos}}</span>
 	</p>
 	{% endif %}
@@ -247,7 +247,7 @@
 	{% endif %}
 	{% if authors.dev %}
 	<p>
-		<span class="font-thin opacity-80">Développement</span><br>
+		<span class="font-thin opacity-80">Entwicklung</span><br>
 		<span class="font-semibold">{{authors.dev}}</span>
 	</p>
 	{% endif %}
@@ -257,7 +257,7 @@
 {% block sponsor_bar %}
 {# <div class="h-16 bg-black -ml-4 -mr-4 flex items-center flex-row-reverse"> #}
 <div class="h-8 md:h-12 flex items-center">
-	<p class="text-xs md:text-base mr-2 opacity-50">Article rémunéré, présenté par</p>
+	<p class="text-xs md:text-base mr-2 opacity-50">Dies ist ein bezahlter Artikel, präsentiert von</p>
 	<a href="https://www.nespresso.com/ch/fr/" target="_blank" class="h-2/4"><img src="img/this/logo-nespresso-full-black.png" alt="Logo Yuh" class="h-full"></a>
 </div>
 {% endblock %}

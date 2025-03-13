@@ -2,7 +2,8 @@
 
 <!DOCTYPE HTML>
 
-<html lang="fr" class="h-full relative"> 
+<html lang="de" class="h-full relative"> 
+
 	<head>
 		<!-- OneTrust Cookies Consent Notice start for blick.ch -->
 		<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="d57e5842-f42f-46bc-a4ea-4a82bd82322c" ></script>
@@ -30,16 +31,23 @@
 
 		{# <?php include 'hb_card_tp.php'; ?> #}
 		{{ block('head_brand') }}
-		
 	</head>
-	<!-- OneTrust Cookies Consent Notice start for blick.ch -->
-	<!-- <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="d57e5842-f42f-46bc-a4ea-4a82bd82322c" ></script>
-	<script type="text/javascript">
-	function OptanonWrapper() { } 
-	</script> -->
-	<!-- OneTrust Cookies Consent Notice end for blick.ch --> 
+	
 	{{ block('frame') }}
 	<body class="bg-white h-full"> 
+
+		<!-- Add the IFRAME code snippet for impression tracking with dynamic timestamp -->
+		<script>
+		var timestamp = new Date().getTime();
+		var iframeSrc = "https://ad.doubleclick.net/ddm/trackimpi/N6264.148254BLICK.CH/B31076007.381450892;dc_trk_aid=572320269;dc_trk_cid=204772261;ord=" + timestamp + ";dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ltd=;dc_tdv=1?";
+		document.write('<iframe src="' + iframeSrc + '" width="1" height="1" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" bordercolor="#000000"></iframe>');
+
+		
+		//alert(timestamp);
+		</script>
+
+		<script language='JavaScript1.1' SRC="https://ad.doubleclick.net/ddm/trackimpj/N6264.148254BLICK.CH/B31076007.381450892;dc_trk_aid=572320269;dc_trk_cid=204772261;ord=' + timestamp + ';dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ltd=;dc_tdv=1?" attributionsrc ></script>
+
 		<div class="wrapper">
 		<!-- {{ block('loading_overlay') }} -->
 		{{ block('gtm') }}
@@ -53,7 +61,7 @@
 		{# ------------------------------------------------------------------------ #}
 		{# HERO 50/50 NOT BOXED #}
 		<div class="hero color-gradient">
-			<div class="container h-full max-w-screen-xl relative px-4 md:px-20">
+			<div class="container h-full max-w-screen-xl relative px-4 md:px-20"> 
 
 				<div class="img-hero aspect-square mb-10 mx-auto w-4/5 md:w-2/5 relative md:absolute top-10 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:right-0">
 					<img class="absolute w-full hero-shape" src="img/this/img-hero-shape.png" alt="">
@@ -65,8 +73,8 @@
 
 				<div class="w-full md:w-3/5 md:h-full relative md:relative bottom-0 left-0 right-0">
 					<div class="static md:absolute bottom-0 md:bottom-auto top-auto md:top-1/2 -translate-y-0 md:-translate-y-1/2 text-center md:text-left">
-						<h3 class="w-full text-lg md:text-xl mb-2 md:mb-8 font-light">Compostable à domicile</h3> 
-						<h1 class="text-gradient text-2xl md:text-6xl font-bold mb-6 md:mb-10">Comment Nespresso a imaginé ses capsules à base de papier</h1>
+						<h3 class="w-full text-lg md:text-xl mb-2 md:mb-8 font-light">Zu Hause kompostierbar</h3> 
+						<h1 class="text-gradient text-2xl md:text-6xl font-bold mb-6 md:mb-10">So sind die Kapseln auf Papierbasis entstanden</h1>
 						{{ block('sponsor_bar') }}
 					</div>
 				</div>
@@ -128,7 +136,7 @@
 		<div class="container max-w-screen-2xl px-4 relative bg-white">
 			<div class="chapeau container py-8 max-w-2xl">
 				<p class="text-xl md:text-2xl mt-2 md:mt-12">
-					Concevoir des cafés aux arômes raffinés, à la qualité incomparable : c’est tout le savoir-faire de Nespresso. Une expertise que l’entreprise suisse a dû mettre à profit pour relever un défi de taille, la création d’une capsule à base de papier, compostable à domicile. Circularité et excellence gustative font-elles bon ménage ? Retour sur les coulisses d’une réelle innovation.
+					Unvergessliche Geschmackserlebnisse und Kaffee von höchster Qualität – dafür ist Nespresso seit jeher bekannt. Dank viel Erfahrung und Know-how gelang es dem Schweizer Unternehmen, eine seiner grössten Herausforderungen zu meistern: eine neue Kapsel auf Papierbasis, die jede und jeder zu Hause kompostieren kann. Doch wie verträgt sich Recycling mit echtem Kaffeegenuss? Ein Blick hinter die Kulissen einer Innovation.
 				</p>
 			</div>            
 			{{ block('social') }}
@@ -136,7 +144,7 @@
 
 			<div class="container mt-8 mb-12 max-w-2xl">
 				<p class="lettrine text-lg font-light mb-10 md:mb-12">
-					« En bouche il y une fine acidité avec un côté très torréfié, presque cacaoté », identifie Jérôme Aké Béda, sommelier de renom et Maître d'Hôtel, qui se prête au jeu de la dégustation pour Nespresso. A priori, rien d’étonnant pour un café d’exception. Nespresso est réputée autant pour la diversité que pour la qualité de ses assemblages. Et avec ses innombrables cafés, distribués dans 83 pays, le fabricant suisse sait depuis longtemps comment répondre aux préférences locales, aux attentes différenciées de chaque marché, parfois au sein d’un même territoire ! On l’oublie parfois, mais l’allié de poids que Nespresso a développé pour garantir les nuances subtiles de sa large gamme de saveurs, c’est sa capsule en aluminium. Léger, et recyclable à l’infini, ce matériau est l’un des meilleurs pour conserver la fraîcheur et les qualités du café pour une plus longue durée de conservation.
+					«Im Mund eine feine Säure mit einer sehr röstigen, fast kakaohaltigen Note», sagt Jérôme Aké Béda, renommierter Sommelier und Maître d'Hôtel, der für Nespresso Kaffee degustiert. Soweit nichts Besonderes für einen guten Kaffee. Nespresso ist für die Vielfalt wie auch die Qualität ihrer Kreationen bekannt. Die Schweizer Firma exportiert ihre unzähligen Kaffeesorten in über 83 Länder und weiss somit schon lange, wie man die lokalen Vorlieben und unterschiedlichen Erwartungen der Kaffeeliebhaberinnen und -liebhaber befriedigt – manchmal sogar für eine spezifische Region. Was dabei oft etwas in den Hintergrund gerät, aber die wohl wichtigste Verbündete von Nespresso ist, um die feinen Nuancen ihrer breiten Geschmackspalette in die Tassen zu bringen: die eigens entwickelte Aluminiumkapsel. Dieses leichte und unendlich oft recycelbare Material ist extrem gut dafür geeignet, die Frische und Qualität eines Kaffees über längere Zeit zu bewahren.
 				</p>
 				
 			</div>
@@ -144,8 +152,10 @@
 
 		<div class="container max-w-4xl relative bg-red px-4 md:px-0 mb-10 md:mb-12">
 			<div class="mx-auto">
-							
-				<iframe class="w-full aspect-video mb-10 md:mb-12 rounded-2xl" src="https://player.vimeo.com/video/524933864?h=1ac4fd9fb4&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+				<iframe class="w-full aspect-video mb-10 md:mb-12 rounded-2xl" src="https://player.vimeo.com/video/883327052?h=1ad98f20a7&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+						
+				{# <iframe class="w-full aspect-video mb-10 md:mb-12 rounded-2xl" src="https://player.vimeo.com/video/524933864?h=1ac4fd9fb4&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> #}
 
 			</div>
 		</div>
@@ -155,14 +165,15 @@
 
 				<div class="color border-2 border-custom rounded-2xl flex px-4 py-6 mb-6 md:mb-10">
 					<div class="mr-4"><img class="w-40" src="img/this/icon-recipe.png" alt=""></div>
-					<div>
-						<p class="font-light opacity-50 mb-3">Envie de réaliser cette recette vous-même ?</p>
-						<p><a class="font-semibold underline decoration-2" href="pdf/Rezept_Lachs_Nespresso.pdf" target="_blank">Télécharger la recette « In Kaffee gebeizter Lachs mit Kohlrabisalat und Tabiokachips »</a></p>
+					<div> 
+						<p class="font-light opacity-50 mb-3">Möchten Sie dieses Rezept selbst kochen?</p>
+						<p><a class="font-semibold underline decoration-2" href="pdf/rezept-in-kaffee-gebeizter-lachs.pdf" target="_blank">Rezept «In Kaffee gebeizter Lachs mit Kohlrabisalat und Tabiokachips» herunterladen</a></p>
 					</div>
 				</div>
 				
 				<p class="text-lg font-light mb-16 md:mb-36">
-					Pourtant, les commentaires enthousiastes du sommelier concernent des arômes encapsulés, pour la première fois… dans une capsule à base de papier ! Une matière utilisée de manière inédite par Nespresso, et qui a posé de sacrés défis, notamment gustatifs. Les propriétés et le processus d’extraction d’une capsule conçue avec un composant autre que l’aluminium peuvent créer un résultat et une expérience sensorielle en tasse différents de ce que connaissent les habitués. Alors comment la marque a-t-elle réussi à garantir ses saveurs, et maintenir une expérience de dégustation inégalée? Retour sur un tour de force.
+					In diesem Fall beziehen sich die lobenden Worte des Sommeliers aber auf Aromen, die nicht in Aluminium, sondern in einer Kapsel auf Papierbasis eingehüllt sind. Ein Material, das Nespresso auf eine völlig neue Weise verwendet und eine ziemliche Herausforderung darstellte, vor allem für den Geschmack. Denn Kapseln, die nicht aus Aluminium hergestellt werden, verhalten sich bei der Extraktion in der Maschine ganz anders. Und dies wiederum könnte einen Kaffeegeschmack schaffen, der sich vom gewohnten Kaffeeerlebnis unterscheidet. Wie haben sie es also geschafft, den Geschmack und das unvergleichliche Genusserlebnis zu bewahren? Ein Rückblick auf eine wahre Meisterleistung.
+
 				</p>
 			</div>
 		</div>
@@ -170,7 +181,7 @@
 		<section id="title1" class="color-gradient overflow-visible px-4 md:px-0 py-4 md:py-12 h-custom-title">
 			<div class="container max-w-4xl h-full relative">
 				<div class="w-4/6 md:w-6/12 float-left absolute top-auto bottom-3 md:bottom-auto md:top-1/2 md:-translate-y-1/2">
-					<h2 class="text-custom-dark2 font-thin">Cinq<br>nouveaux<br>assemblages</h2>
+					<h2 class="text-custom-dark2 font-thin">Fünf<br>neue<br>Kreationen</h2>
 				</div>
 				<div class="img-container w-1/4 float-left absolute left-custom-imgcontainer top-1/2 -translate-y-1/2 z-10">
 					<img src="img/this/inter-1-sac-5.png" alt="" class="title-1-img-5 absolute h-full w-full top-0 right-0 bottom-0 left-0">
@@ -188,19 +199,19 @@
 			<div class="container pt-8 max-w-2xl relative">
 							
 				<p class="text-lg font-light mb-6 md:mb-10 lettrine">
-					Il a d’abord fallu repenser les assemblages de café. Au-delà d’une innovation technique, « il s’agit là également d’une innovation dans le type de café associé à ces capsules. Nous avons identifié pour ces capsules à base de papier des cafés et assemblages qui offrent la meilleure expérience, ainsi qu’une expression en tasse de grande qualité», précise Dominique Niederhauser, Expert café chez Nespresso Suisse.  	
+					Zunächst musste ein Umdenken bei den Kaffeemischungen stattfinden. Neben der technischen Innovation «haben wir es hier auch mit einer Innovation bei der Art des Kaffees zu tun, der in diese Kapseln kommt. Wir haben für diese Kapseln auf Papierbasis speziell Kaffees und Mischungen gesucht, die einen hochwertigen Geschmack in der Tasse und das bestmögliche Erlebnis bieten», erklärt Dominique Niederhauser, Kaffeeexperte bei Nespresso Schweiz.   	
 				</p>
 				<p class="text-lg font-light mb-10 md:mb-10 w-full md:w-3/5">
-					Le café Nespresso se définit par un équilibre, un corps et une subtile dominance aromatique qui peut être fruitée, voire torréfiée en fonction des préférences de ses consommateurs. L’arrivée des nouvelles capsules n’a pas changé l’ADN de la marque : qualité de la matière première et des procédés agricoles, fraîcheur du produit qui préserve les arômes jusqu’à l’insertion de la capsule dans une machine. Cependant, elle a contraint ses équipes à adapter la sélection, la mouture et la torréfaction afin de garder ce style de qualité Nespresso, tout en l’adaptant à la capsule papier et à une pression d’extraction plus légère.  
+					Nespresso-Kaffee definiert sich durch Ausgewogenheit, seinen Körper und eine subtile aromatische Dominanz, die je nach Vorlieben der Konsumentinnen und Konsumenten fruchtig oder auch röstig sein kann. Die neuen Kapseln änderten nichts an der DNA der Marke: hochwertige Rohstoffe und landwirtschaftliche Verfahren, frische Produkte, die ihre Aromen bis zum Einsetzen der Kapsel in die Maschine bewahren. Was jedoch geändert wurde, waren Auswahl, Mahlverfahren und Röstung, um den typischen Stil der Nespresso-Qualität beizubehalten und ihn an die Kapsel auf Papierbasis und den leichteren Extraktionsdruck anzupassen.   
 				</p>
 				<blockquote class="quote1 relative md:absolute w-4/5 mx-auto md:w-3/5 left-auto md:left-3/4 top-1/2 md:-translate-y-1/2 text-custom-dark1 pt-3 md:pt-6 pb-5 md:pb-5 mb-10 md:mb-0">
 					<div class="linetop w-full h-px bg-custom-dark1 absolute top-0"></div>
 					<div class="linebottom w-full h-px bg-custom-dark1 absolute bottom-0"></div>
-					<span class="quote-txt block">« Beaucoup de rondeur, de structure, beaucoup de longueur… »</span>
+					<span class="quote-txt block">« Sehr rund, eine tiefe Struktur, viel Länge… »</span>
 					<span class="auth block mt-3 md:mt-5">– Jérôme Aké Béda</span>
 				</blockquote>
 				<p class="text-lg font-light mb-10 md:mb-12">
-					Résultat : cinq cafés uniques et singuliers, dont l’un est certifié bio, avec des profils distincts. Hormis la déclinaison Peru Organic, ces saveurs n’existent pas dans la gamme de capsules en aluminium, mais font mouche auprès des aficionados de la boisson. D’ailleurs, pour valider ces nouveaux breuvages, Nespresso s’est exposée, pour Blick, à des avis externes de références, ceux de professionnels du goût, à savoir la cheffe Silvia Manser du restaurant Truube à Gais et Jérôme Aké Béda, sommelier de renom et Maître d'Hôtel. 
+					Das Ergebnis dieser Adaptionen: fünf einzigartige und einmalige Kaffees mit unterschiedlichen Geschmacksprofilen, einer davon auch in<br>Bio-Qualität. Abgesehen von der Variante Peru Organic gibt es diese Geschmacksrichtungen bisher nur in den neuen Kapseln, sie treffen aber bei Kaffee-Aficionados genau ins Schwarze. Nespresso hat die neuen Sorten gemeinsam mit Blick auch einer strengen Prüfung unterzogen – und zwar bei zwei absoluten Geschmacksprofis: Küchenchefin Silvia Manser vom Restaurant Truube in Gais und Jérôme Aké Béda, renommierter Sommelier und Maître d'Hôtel.
 				</p>
 				
 			</div>
@@ -214,14 +225,14 @@
 						<img class="caps-left" src="img/this/capsule1.png" alt="photo de capsule Nespresso en aluminium">
 						<img class="caps-right" src="img/this/capsule2.png" alt="photo de capsule Nespresso en papier">
 					</div>
-					<figcaption class="font-sans text-xs opacity-50">A gauche, la traditionnelle capsule en aluminum. A droite, la nouvelle capsule en papier</figcaption>
+					<figcaption class="font-sans text-xs opacity-50">Links die bekannte Kapsel aus Aluminium. Rechts die neue heimkompostierbare Kapsel auf Papierbasis.</figcaption>
 				</figure>
 							
 				<p class="text-lg font-light mb-6 md:mb-10">
-					Pour ces spécialistes du goût, la qualité Nespresso n’est pas compromise, au contraire ! Ils dégustent Ispirazione Sicilia, qui, comme les arômes du café Ispirazione Emilia se définit par une saveur intense. « C’est vraiment un grand café » pour Jérôme Aké Béda qui apprécie « sa densité en bouche ». « Beaucoup de rondeur, de structure, beaucoup de longueur… », savoure le chef. L’intensité des arômes inspire d’ailleurs une recette inédite à Silvia Manser, à base de saumon ! 
+					Die beiden Profis sehen die Qualität von Nespresso nicht gefährdet – im Gegenteil! Sie degustierten Ispirazione Sicilia, der sich wie die Sorte Ispirazione Emilia durch einen intensiven Geschmack auszeichnet. «Das ist wirklich ein herrlicher Kaffee», so Jérôme Aké Béda, den «die Vollmundigkeit» begeistert. «Sehr rund, eine tiefe Struktur, viel Länge ...», geniesst die Spitzenköchin. Die Intensität der Aromen inspirierte Silvia Manser direkt zu einem ganz neuen Lachs-Rezept.
 				</p>
 				<p class="text-lg font-light mb-16 md:mb-36">
-					Peru Organic et Ispirazione Aosta, autres cafés déclinés dans ces nouvelles capsules, d’intensité moyenne, répondent aux besoins d’un café rond et gourmand. Le Decaffeinato, espresso intense et aromatique au mélange fortement torréfié, dévoile pour sa part des arômes de céréales grillées, une touche de cacao et des notes délicates de fruit… le tout sans caféine !
+					Peru Organic und Ispirazione Aosta, zwei weitere Kaffeesorten aus den neuen Kapseln, sind von milder Intensität und bieten ein sehr rundes und ausgewogenes Kaffeeerlebnis. Decaffeinato, ein intensiver und aromatischer Espresso mit einer dunklen Röstung, enthält Noten von geröstetem Getreide, einen Hauch von Kakao und zarte Fruchtnoten – und das alles ohne Koffein.
 				</p>
 				
 			</div>
@@ -230,7 +241,7 @@
 		<section id="title2" class="color-gradient overflow-visible px-4 md:px-0 py-4 md:py-12 h-custom-title">
 			<div class="container max-w-4xl h-full relative">
 				<div class="w-4/6 md:w-6/12 float-left absolute top-auto bottom-3 md:bottom-auto md:top-1/2 md:-translate-y-1/2">
-					<h2 class="text-custom-dark2 font-thin">Rétro-compatibilité et&nbsp;conservation</h2>
+					<h2 class="text-custom-dark2 font-thin">Kompatibilität und&nbsp;Haltbarkeit</h2>
 				</div>
 				<div class="img-container w-1/4 float-left absolute -right-2 md:-right-16 bottom-1/2 translate-y-1/2 md:-bottom-20 md:translate-y-0 z-10">
 					<img class="title-2-img-1" src="img/this/_machine.png" alt="" class="w-full">
@@ -257,10 +268,11 @@
 			<div class="container pt-8 max-w-2xl relative">
 							
 				<p class="text-lg font-light mb-6 md:mb-10 lettrine">
-					Sur le plan gustatif, maintenir la qualité et l’expérience Nespresso a représenté un challenge. Mais techniquement, les limites ont aussi été repoussées. La collection Home Compostable constitue une innovation de rupture. Elle a en effet demandé de porter la technologie de production des capsules alu, bien établie, à des niveaux de précision sans précédent, pour retrouver la qualité Nespresso dans une capsule à base de papier.	
+					Geschmacklich war es eine Herausforderung, die Qualität und das Nespresso-Erlebnis beizubehalten. Es galt aber auch, technische Elemente neu zu entwerfen, um die bahnbrechende Innovation der heimkompostierbaren Kapseln zu realisieren. Die Technologie zur Herstellung von Alukapseln musste dazu auf ein unglaubliches Mass an Präzision getrimmt werden, um die Nespresso-Qualität in die Kapsel auf Papierbasis zu bringen.
+
 				</p>
 				<p class="text-lg font-light mb-10 md:mb-12">
-					Il a d’abord fallu s’assurer de la rétrocompatibilité de ces capsules. Hors de question de concevoir un nouveau système d’extraction ou de demander aux consommateurs l’achat d’une nouvelle machine, Nespresso a voulu que ces capsules puissent s’utiliser avec son système de machines historique, dit « Original », actuellement le plus répandu. 
+					Zudem mussten die Kapseln auch weiterhin in alle "Original"-Maschinen passen. Nespresso wollte kein neues System entwickeln oder den Kundinnen und Kunden eine neue Kaffeemaschine aufdrängen. Die Kapseln sollten mit den aktuell meist genutzten Maschinen, dem Original-Sortiment kompatibel sein. 
 				</p>
 				
 			</div>
@@ -278,10 +290,11 @@
 			<div class="container max-w-2xl relative">
 							
 				<p class="text-lg font-light mb-6 md:mb-10">
-					C’est une collaboration avec le finlandais Huhtamaki, spécialiste mondial de solutions d’emballage durable qui a permis de trouver la solution. Sa technologie de formage haute précision, est partie d’un procédé déjà connu et utilisé, pour produire par exemple les boîtes à œufs. Cette technique a ensuite été dotée de plusieurs innovations pour permettre le formatage de haute précision à la pâte à papier. Produites à Orbe, ces nouvelles capsules sont donc composées à 82 % de pâte à papier. 
+					Die Zusammenarbeit mit dem finnischen Unternehmen Huhtamaki, einem weltweiten Spezialisten für nachhaltige Verpackungslösungen, brachte das ersehnte Ergebnis. Ihre hochpräzise Formungstechnologie basiert auf einem bereits bekannten Verfahren, das auch bei der Herstellung von Eierkartons angewendet wird. Zu dieser Technik kamen weitere Innovationen hinzu, um den Holzstoff hochpräzise formen zu können. Hergestellt werden die neuen Kapseln, die zu 82% aus Papierzellstoff bestehen, in einem der drei Schweizer Produktionszentren von Nespresso.
+
 				</p>
 				<p class="text-lg font-light mb-10 md:mb-12">
-					Autre défi : la conservation. La force de l’alu est d’offrir une longue durée de vie au café, de garantir le maintien de sa saveur, de sa fraicheur et de ses arômes, des mois durant. Comment retrouver des propriétés équivalentes avec matériau capable de se décomposer, donc, aux spécificités a priori opposées ? Nespresso a planché sur le sujet durant trois longues années. Son innovation associe plusieurs éléments. Une fine pellicule biodégradable, d’abord, qui recouvre l’intérieur de la capsule à base de papier, afin de protéger le café du phénomène d’oxydation, et de préserver ses délicats arômes et sa fraîcheur. 
+					Eine weitere Herausforderung: die Haltbarkeit. Ein Vorteil von Alukapseln ist die lange Haltbarkeit des Kaffees. Sein Geschmack, seine Frische und Aromen können darin über Monate hinweg erhalten bleiben. Wie konserviert man nun diese Qualität mit einem Material, das sich mit der Zeit zersetzt und auf den ersten Blick völlig ungeeignete Eigenschaften aufweist? An dieser Frage forschte Nespresso drei lange Jahre. Die Lösung vereint gleich mehrere geniale Elemente. Eine dünne, biologisch abbaubare Folie an der Innenseite der Kapseln schützt den Kaffee vor Oxidation und bewahrt seine feinen Aromen und die Frische.
 				</p>
 
 				<figure class="w-full mx-auto mb-10 md:mb-12">
@@ -292,7 +305,7 @@
 				</figure>
 
 				<p class="text-lg font-light mb-10 md:mb-12">
-					Un packaging dédié, ensuite, à savoir un sac en papier assurant une conservation de six mois (si fermé) - un mois, à compter de l’ouverture du sachet refermé ensuite correctement, soit avec une pince ou un clip de scellage. S’il n’est pas nécessaire de changer de machine, adopter quelques bons gestes est donc conseillé!
+					Dazu ein spezieller Papierbeutel als Verpackung, der die Kapseln sechs Monate haltbar macht (vor dem Öffnen). Wird der Beutel nach dem Öffnen wieder mit einer Klammer oder einem Clip verschlossen, bleiben die Kapseln noch einen Monat frisch. Eine neue Kaffeemaschine ist also nicht nötig. Dennoch: nachfolgend einige hilfreiche Tipps für den Umgang mit den neuen Kapseln auf Papierbasis.
 				</p>
 				
 				
@@ -301,32 +314,32 @@
 
 		<figure class="best-coffee color max-w-4xl px-6 md:px-8 py-3 md:py-6 rounded-2xl mb-16 md:mb-48 mx-4 md:mx-auto">
 			<h4 class="text-xl md:text-3xl mb-8 md:mb-10 text-center">
-				Pour obtenir le meilleur café possible avec les capsules à base de papier, compostables à domicile de Nespresso :
+				So geniessen Sie den bestmöglichen Kaffee mit den heimkompostierbaren Nespresso-Kapseln auf Papierbasis:
 			</h4>
 			<ul>
 				<li class="flex mb-6">
 					<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/dot-1.svg" alt=""></div></span>
-					<span class="text-normal md:text-xl font-light">Après avoir préparé votre café, éjecter la capsule dans le bac dédié, et vider ce dernier au moins une fois par jour, dans votre compost domestique si vous en disposez.</span>
+					<span class="text-normal md:text-xl font-light">Werfen Sie die Kapseln in den dafür vorgesehenen Behälter, nachdem Sie Ihren Kaffee zubereitet haben. Leeren Sie diesen mindestens einmal täglich in Ihren Heimkomposter, falls Sie einen haben.</span>
 				</li>
 				<li class="flex mb-6">
 					<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/dot-2.svg" alt=""></div></span>
-					<span class="text-normal md:text-xl font-light">Refermer le sachet de protection qui réunit les capsules après chaque utilisation avec une pince dédiée.</span>
+					<span class="text-normal md:text-xl font-light">Verschliessen Sie den Beutel mit den restlichen Kapseln nach jedem Gebrauch mit einer Klammer.</span>
 				</li>
 				<li class="flex mb-6 items-center">
 					<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/dot-3.svg" alt=""></div></span>
-					<span class="text-normal md:text-xl font-light">Conserver le sachet dans un endroit frais et sec, à température ambiante</span>
+					<span class="text-normal md:text-xl font-light">Bewahren Sie den Beutel an einem kühlen und trockenen Ort bei Raumtemperatur auf.</span>
 				</li>
 				<li class="flex mb-6">
 					<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/dot-4.svg" alt=""></div></span>
-					<span class="text-normal md:text-xl font-light">Eviter de stocker les capsules ou leur sachet au réfrigérateur, l’humidité aura une incidence sur la fraîcheur du café !</span>
+					<span class="text-normal md:text-xl font-light">Kapseln oder Beutel sollten nicht im Kühlschrank aufbewahrt werden, da die Feuchtigkeit die Frische des Kaffees beeinträchtigt. </span>
 				</li>
 				<li class="flex mb-6">
 					<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/dot-5.svg" alt=""></div></span>
-					<span class="text-normal md:text-xl font-light">Après ouverture du sachet, déguster toutes les capsules dans les deux semaines.</span>
+					<span class="text-normal md:text-xl font-light">Bereiten Sie nach dem Öffnen des Beutels alle Kapseln innerhalb von vier Wochen zu.</span>
 				</li>
 				<li class="flex mb-6">
 					<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/dot-6.svg" alt=""></div></span>
-					<span class="text-normal md:text-xl font-light">Quatre semaines après ouverture de leur sachet de protection, les capsules auront perdu une partie de leur saveur. La durée de conservation d'un sachet non ouvert est de six mois.</span>
+					<span class="text-normal md:text-xl font-light">Vier Wochen nach dem Öffnen des Beutels verlieren die Kapseln einen Teil ihres Geschmacks. Ungeöffnet ist der Kaffee im Beutel sechs Monate haltbar.</span>
 				</li>
 			</ul>
 		</figure>
@@ -336,9 +349,9 @@
 		<section id="title3" class="color-gradient overflow-visible px-4 md:px-0 py-4 md:py-12 h-custom-title">
 			<div class="container max-w-4xl h-full relative">
 				<div class="w-4/6 md:w-6/12 float-left absolute top-auto bottom-3 md:bottom-auto md:top-1/2 md:-translate-y-1/2">
-					<h2 class="text-custom-dark2 font-thin">Faciliter le compostage à la maison</h2>
+					<h2 class="text-custom-dark2 font-thin">Eine einfachere Kompostierung zu Hause</h2>
 				</div>
-				<div class="img-container w-1/4 h-auto float-left absolute -right-6 md:right-6 top-1/2 -translate-y-1/2 z-10">
+				<div class="img-container w-1/4 h-auto float-left absolute -right-6 md:-right-8 top-1/2 -translate-y-1/2 z-10">
 					<img class="title-3-img-1" src="img/this/img-titre3.png" alt="" class="absolute h-full w-full top-0 right-0 bottom-0 left-0">
 				</div>
 				<!-- <img src="img/this/inter-1-sac-1.png" alt="" class="absolute  z-10"> -->
@@ -350,7 +363,8 @@
 			<div class="container pt-8 max-w-2xl relative">
 							
 				<p class="text-lg font-light mb-10 md:mb-12 lettrine">
-					L’impact environnemental d’une capsule compostable Nespresso est équivalent à celui d’une capsule Nespresso recyclée, révèle une analyse interne, qui prend en compte tout le cycle de vie du produit. Quel est alors l’intérêt de cette innovation, côté environnement ? D’abord, offrir une solution durable à celles et ceux qui préfèrent et qui peuvent composter à domicile !  	
+					Eine interne Analyse zum gesamten Lebenszyklus der Kapseln hat gezeigt, dass der ökologische Fussabdruck der kompostierbaren Nespresso-Kapsel ähnlich hoch wie der der recycelten Alu-Kapseln ist. Welchen Benefit haben also die neuen Kapseln für die Umwelt? Nun, sie bieten eine nachhaltige Lösung für diejenigen, die einen Heimkomposter haben und ihre Kapseln kompostieren möchten.
+ 	
 				</p>
 
 			</div>
@@ -358,7 +372,7 @@
 
 		<figure class="composting font-sans color max-w-4xl mx-4 md:mx-auto px-6 md:px-8 py-3 md:py-6 rounded-2xl mb-10 md:mb-12">
 			<h4 class="text-xl md:text-3xl mb-8 md:mb-10 text-center">
-				Compostage facile à<br>votre domicile
+				Einfaches Kompostieren<br>zu Hause
 			</h4>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-x-0 md:gap-x-8">
 				<div class="step-1 mb-10 md:mb-0">
@@ -426,7 +440,7 @@
 						  </g>
 						</g>
 					</svg>
-					<span class="step-1-txt font-light text-center block">Composez votre compost en équilibrant déchets de jardin et de cuisine. Ajoutez vos capsule en papier Nespresso.</span>
+					<span class="step-1-txt font-light text-center block">Stellen Sie Ihren Kompost zusammen, indem Sie Garten- und Küchenabfälle ausgewogen kombinieren. Geben Sie Ihre Nespresso-Kapseln auf Papierbasis bei.</span>
 				</div>
 				<div class="step-2 mb-10 md:mb-0">
 					<svg xmlns="http://www.w3.org/2000/svg" class="step-2-svg mx-auto mb-2" width="215" height="296" viewBox="0 0 215 296">
@@ -487,7 +501,7 @@
 						  </g>
 						</g>
 					</svg>
-					<span class="step-2-txt font-light text-center block">Alimentez ensuite votre composte avec déchets secs et humides. Remuez régulièrement et arrosez si nécessaire.</span>
+					<span class="step-2-txt font-light text-center block">Geben Sie Ihrem Kompost dann trockene und feuchte Abfälle zu. Bewegen Sie ihn regelmässig und bewässern Sie ihn bei Bedarf. </span>
 				</div>
 				<div class="step-3 mb-4md:mb-0">
 					<svg xmlns="http://www.w3.org/2000/svg" class="step-3-svg mx-auto mb-2" xmlns:xlink="http://www.w3.org/1999/xlink" width="215" height="296" viewBox="0 0 215 296">
@@ -546,7 +560,7 @@
 						  </g>
 						</g>
 					</svg>
-					<span class="step-3-txt font-light text-center block">Les capsules Nespresso à base de papier sont décomposées naturellement en même temps que les déchets végétaux</span>
+					<span class="step-3-txt font-light text-center block">Papierbasierte Nespresso-Kapseln werden auf natürliche Weise zusammen mit den Pflanzenabfällen abgebaut.</span>
 				</div>
 			</div>
 		</figure>
@@ -555,7 +569,7 @@
 			<div class="container max-w-2xl relative">
 							
 				<p class="text-lg font-light mb-6 md:mb-10">
-					Nespresso s’est en effet assurée que ses capsules se dégradent en un temps record. D’après les normes les plus strictes du secteur, la durée de biodégradabilité du compost domestique est de douze mois (à 28 °C et 40% d’humidité), contre six mois pour le processus industriel. 
+					Nespresso hat nämlich dafür gesorgt, dass sich die Kapseln als « OK compost HOME » und « OK compost INDUSTRIAL » zertifiziert sind. Die Branchenstandards verlangen eine biologische Abbaubarkeit des Heimkomposts von zwölf Monaten (bei 28 °C und 40% Feuchtigkeit). Der industrielle Prozess dauert sechs Monate.
 				</p>
 			</div>
 		</div>
@@ -565,13 +579,13 @@
 
 
 				<p class="text-lg font-light mb-12 md:mb-10 w-full md:w-3/5">
-					Bien que les deux procédés reposent sur les mêmes principes, -la transformation des matières en dioxyde de carbone, en eau et en biomasse par des micro-organismes-, leurs conditions diffèrent. « Le compostage industriel se fait dans des installations spéciales qui peuvent traiter de très grandes quantités de biodéchets. Les températures sont élevées et toutes les conditions sont réunies pour obtenir un compost de qualité en un temps relativement court. C’est un véritable paradis pour les micro-organismes.
+					Obwohl beide Verfahren auf der Umwandlung von Rohstoffen in Kohlendioxid, Wasser und Biomasse durch Mikroorganismen beruhen, geschehen sie unter unterschiedlichen Bedingungen. «Die industrielle Kompostierung erfolgt in speziellen Anlagen, die sehr grosse Mengen an Bioabfall verarbeiten können.
 				</p>
 
 				<blockquote class="quote2 relative md:absolute w-4/5 mx-auto md:w-3/5 left-auto md:left-3/4 top-1/2 md:-translate-y-1/2 text-custom-dark1 pt-3 md:pt-6 pb-5 md:pb-5 mb-10 md:mb-0">
 					<div class="linetop w-full h-px bg-custom-dark1 absolute top-0"></div>
 					<div class="linebottom w-full h-px bg-custom-dark1 absolute bottom-0"></div>
-					<span class="quote-txt block">« Nous avons identifié des cafés et assemblages qui offrent une expression en tasse de grande qualité »</span>
+					<span class="quote-txt block">« Wir haben  Kaffees und Mischungen gesucht, die einen hochwertigen Geschmack in der Tasse bieten »</span>
 					<span class="auth block mt-3 md:mt-5">– Dominique Niederhauser</span>
 				</blockquote>
 
@@ -582,37 +596,37 @@
 			<div class="container max-w-2xl relative">
 
 				<p class="text-lg font-light mb-10 md:mb-12">
-					Dans le cas du compostage à domicile, en revanche, l’apport de matière fraîche est moins fréquent et moins intensif. La température est ainsi abaissée et le processus est considérablement ralenti », précise TÜV Austria, organisme aujourd’hui référence en la matière, et qui a certifié les nouvelles capsules Nespresso.  Néanmoins, de nombreux tests ont montré que la décomposition de ces dernières survient dans un délai bien plus court que les douze mois réglementaires.  
+					Die Temperaturen sind höher und es herrschen perfekte Bedingungen, um relativ hochwertigen Kompost zu erhalten. Ein wahres Paradies für Mikroorganismen. Bei der Heimkompostierung wird weniger oft und nicht die gleiche Menge an frischem Material zugeführt. Dadurch sinkt die Temperatur und der Prozess ist langsamer», erklärt der TÜV AUSTRIA, die internationale Zertifizierungsstelle, die diese Kapseln als heimkompostierbar zertifiziert hat. Zahlreiche Tests haben aber gezeigt, dass die Zersetzung der Kapseln viel schneller als in den vorgeschriebenen zwölf Monaten erfolgt.   
 				</p>
 				
 				<figure class="ok-compost color px-6 md:px-8 py-3 md:py-6 rounded-2xl mb-10 md:mb-12">
 					<h4 class="text-xl md:text-3xl mb-8 md:mb-10 text-center">
-						Ok « Compost HOME »<br>en un clin d’œil
+						« Ok compost HOME »<br>auf einen Blick
 					</h4>
 					<ul class="font-sans">
 						<li class="flex mb-6">
 							<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/check.svg" alt=""></div></span>
-							<span class="text-normal md:text-xl font-light">Le seul modèle de certification volontaire pour le compostage domestique</span>
+							<span class="text-normal md:text-xl font-light">Die einzige freiwillige Zertifizierung für die Heimkompostierung</span>
 						</li>
 						<li class="flex mb-6 items-center">
 							<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/check.svg" alt=""></div></span>
-							<span class="text-normal md:text-xl font-light">Assuré par une entreprise autrichienne</span>
+							<span class="text-normal md:text-xl font-light">Versichert durch ein österreichisches Unternehmen</span>
 						</li>
 						<li class="flex mb-6 items-center">
 							<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/check.svg" alt=""></div></span>
-							<span class="text-normal md:text-xl font-light">Basé sur une norme industrielle européenne</span>
+							<span class="text-normal md:text-xl font-light">Basiert auf europäischem Standard</span>
 						</li>
 						<li class="flex mb-6">
 							<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/check.svg" alt=""></div></span>
-							<span class="text-normal md:text-xl font-light">Adapté aux conditions spécifiques du compostage domestique (températures plus basses et dégradation plus longue)</span>
+							<span class="text-normal md:text-xl font-light">Angepasst an die besonderen Bedingungen der Heimkompostierung (niedrigere Temperaturen und längere Abbauzeit)</span>
 						</li>
 						<li class="flex mb-6">
 							<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/check.svg" alt=""></div></span>
-							<span class="text-normal md:text-xl font-light">Quatre critères sont mesurés : la biodégradabilité, la désintégration, l’écotoxicité et les propriétés des matériaux</span>
+							<span class="text-normal md:text-xl font-light">Vier gemessene Kriterien: biologischer Abbau, Zerfall, Ökotoxizität und Schwermetallgehalt</span>
 						</li>
 						<li class="flex mb-6">
 							<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/check.svg" alt=""></div></span>
-							<span class="text-normal md:text-xl font-light">Seuls 1641 certificats « OK compost HOME » sont actuellement attribués à des produits dans le monde entier</span>
+							<span class="text-normal md:text-xl font-light">Weltweit wurden bisher nur 1641 «OK compost HOME»-Zertifikate für Produkte vergeben</span>
 						</li>
 						<li class="flex mb-6 items-center">
 							<span><div class="dot rounded-full mr-4 md:mr-8"><img src="img/this/check.svg" alt=""></div></span>
@@ -623,11 +637,11 @@
 				</figure>
 
 				<p class="text-xl md:text-2xl font-semibold mb-6 md:mb-10">
-					Démocratiser le compostage
+					Kompostierung für zu Hause  
 				</p>
 
 				<p class="text-lg font-light mb-10 md:mb-12">
-					En Suisse, outre le composteur domestique pour les foyers qui y ont accès, les capsules Nespresso à base de papier peuvent être ramenées dans les boutiques Nespresso, grâce au sac dédié à ce produit. Et dans le canton de Genève, elles sont acceptées dans le système public de gestion des biodéchets, appelé « La P'tite Poubelle Verte ». Nespresso collabore par ailleurs activement avec d'autres autorités cantonales pour s’assurer que ses capsules à base de papier soient acceptées par les multiples services publics de gestion des biodéchets. Enfin, pour toutes les personnes n’ayant pas accès à des services ou options de compostage, les solutions en aluminium recyclé restent disponibles, le papier n’étant qu’une alternative de plus, pour que la durabilité soit à portée de chacun !
+					In der Schweiz können die Nespresso-Kapseln auf Papierbasis sowohl in den herkömmlichen Heimkomposter als auch in den Nespresso-Boutiques in einer dafür vorgesehenen Tüte zurückgegeben werden. Nespresso arbeitet darüber hinaus aktiv mit kantonalen Behörden zusammen, damit die Kapseln auf Papierbasis von so vielen öffentlichen Stellen wie möglich für die Entsorgung angenommen werden. Wer keine Möglichkeit zur Kompostierung hat, kann weiterhin auf Lösungen aus recyceltem Aluminium zurückgreifen. Papier ist dabei nur eine weitere Alternative, um Nachhaltigkeit in jeden Haushalt zu bringen.
 				</p>
 
 			</div>
@@ -635,24 +649,24 @@
 
 		<figure class="good-compost font-sans color max-w-4xl mx-4 md:mx-auto px-8 py-6 rounded-2xl mb-48">
 			<h4 class="text-xl md:text-3xl mb-8 md:mb-10 text-center">
-				Compostage bien géré,<br>ce qu’il faut savoir
+				Gute Kompostierung:<br>Was Sie dazu wissen sollten
 			</h4>
 
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-x-0 md:gap-x-8 justify-center">
 				<div class="mb-8 md:md-0">
 					<img src="img/this/icon-air-water.svg" class="good-compost-air mx-auto mb-2" alt="">
-					<span class="font-light text-center block">S’assurer de la présence d’une quantité suffisante d’air et d’humidité dans le tas de compostage</span>
+					<span class="font-light text-center block">Achten Sie darauf, dass Ihr Kompost feucht genug ist und genügend Luft zirkulieren kann.</span>
 				</div>
 				<div class="mb-8 md:md-0">
 					<img src="img/this/icon-grind.svg" class="good-compost-grind mx-auto mb-2" alt="">
-					<span class="font-light text-center block">Effectuer un déchiquetage mécanique des matières premières à texture grossière et equilibrer le mélange de déchets de jardin et de cuisine lors du compostage
+					<span class="font-light text-center block">Zerkleinern Sie gröberes Material (z. B. Äste), bevor sie der Kompostierung zugeführt werden.
 						
 						</span>
 				</div>
 				<div class="mb-8 md:md-0">
 					<img src="img/this/icon-recyclable.svg" class="good-compost-recyclable mx-auto mb-2" alt="">
 					
-					<span class="font-light text-center block">Effectuer une rotation manuelle ou une aération par d’autres moyens au moins trois fois par cycle de 12 mois
+					<span class="font-light text-center block">Mindestens dreimal im Jahr sollten Sie den Kompost wenden, umsetzen oder Luft durch den Haufen strömen lassen.
 						
 						
 					</span>
@@ -662,12 +676,12 @@
 			<div class="md:flex justify-center">
 				<div class="w-full md:w-2/5">
 					<img src="img/this/icon-mesure.svg" class="good-compost-scale mx-auto mb-2" alt="">
-					<span class="font-light text-center block">Garantir une taille minimale de 100 litres pour les systèmes de compostage fermés et isolés et de 0,5 m3 pour les systèmes non fermés et non isolés
+					<span class="font-light text-center block">Geschlossene und isolierte Kompostbehälter sollten mindestens 100 Liter fassen können, offene Kompostsysteme mindestens einen halben Kubikmeter.
 					</span>
 				</div>
 				<div class="w-full md:w-1/3">
 					<img src="img/this/icon-www.svg" class="good-compost-www mx-auto mb-2" alt="">
-					<span class="font-light text-center block">Conseils en vidéo sur <a href="https://youtu.be/VM6VR5gU0Ho" class="font-semibold underline decoration-2" target="_blank">www.nespresso.com/paper</a> et sur <a class="font-semibold underline decoration-2" href="https://youtu.be/VM6VR5gU0Ho" target="_blank">https://youtu.be/VM6VR5gU0Ho</a>
+					<span class="font-light text-center block">Achte auf ein gutes Gleichgewicht zwischen Garten- und Küchenabfällen. Tipps auf <a href="https://ad.doubleclick.net/ddm/trackclk/N6264.148254BLICK.CH/B31076007.381450892;dc_trk_aid=572320269;dc_trk_cid=204772261;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=;dc_tdv=1" class="font-semibold underline decoration-2" target="_blank">www.nespresso.com/paper</a> und als Video: <a class="font-semibold underline decoration-2" href="https://youtu.be/UJXd_OrPIyk" target="_blank">Youtube</a>
 					</span>
 				</div>
 			</div>

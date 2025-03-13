@@ -68,9 +68,9 @@
     var openingTl = new TimelineMax({ paused: true })
         .to($shape, 1, { autoAlpha: 1, rotate: "-=25deg", ease: Power4.easeInOut })
         .to($caps1, 0.5, { autoAlpha: 1, x: "-=10px", ease: Power4.easeInOut }, "-=0.5s")
-        .to($caps2, 0.5, { autoAlpha: 1, x: "-=10px", ease: Power4.easeInOut }, "-=0.250s")
-        .to($bean1, 0.5, { autoAlpha: 1, ease: Power4.easeInOut }, "-=0.750s")
-        .to($bean2, 0.5, { autoAlpha: 1, ease: Power4.easeInOut }, "-=0.5s");
+        .to($caps2, 0.5, { autoAlpha: 1, x: "-=10px", ease: Power4.easeInOut }, "-=0.250s");
+        // .to($bean1, 0.5, { autoAlpha: 1, ease: Power4.easeInOut }, "-=0.750s")
+        // .to($bean2, 0.5, { autoAlpha: 1, ease: Power4.easeInOut }, "-=0.5s");
 
 
     clearOpeningStage();
